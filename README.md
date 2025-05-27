@@ -104,7 +104,6 @@ interface ApiService {
 
 Exécution
 Lancer l’API Spring Boot :
-r
 cd backend-spring
 mvn spring-boot:run
 Lancer le chatbot Flask :
