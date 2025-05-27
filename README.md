@@ -1,23 +1,23 @@
-## 📱 MedScanner AI
+## MedScanner AI
 
-### 🧠 Objectif
+### Objectif
 Développer une application mobile intelligente qui permet d’importer une image d’un médicament (ex : ordonnance ou boîte), d’extraire automatiquement le nom du médicament via OCR, d’en consulter les détails médicaux depuis une base de données ou une API (OpenFDA), et d’interagir avec un assistant virtuel médical basé sur l'IA.
 
 ---
 
-### 🌍 Contexte
+###  Contexte
 Les notices médicales sont souvent longues, techniques, et difficiles à comprendre pour le grand public. Ce projet vise à offrir une solution numérique simple et rapide permettant de reconnaître un médicament à partir d’une image, et de fournir des informations fiables grâce à une base de données médicale enrichie et un chatbot.
 
 ---
 
-### ❗ Problématique
+###  Problématique
 - Comment extraire avec précision le nom d’un médicament à partir d’une image sans caméra ?
 - Comment garantir l’accès à des informations médicales fiables ?
 - Comment proposer un assistant intelligent qui comprend les besoins de l’utilisateur ?
 
 ---
 
-### 🧱 Architecture du projet
+### Architecture du projet
 
 Android App (OCR + Retrofit)
 │
@@ -33,7 +33,7 @@ Flask Chatbot IA
 
 ---
 
-### ⚙️ Technologies & Outils
+###  Technologies & Outils
 
 | Technologie      | Version       |
 |------------------|---------------|
@@ -49,7 +49,7 @@ Flask Chatbot IA
 
 ---
 
-### 🔍 Fonctionnement OCR
+###  Fonctionnement OCR
 
 - L’utilisateur **importe une image depuis la galerie ou le stockage**.
 - Le texte est extrait avec **Tesseract OCR (Tess-Two)**.
@@ -57,7 +57,14 @@ Flask Chatbot IA
 - Si le médicament est dans MongoDB, les infos sont renvoyées.
 - Sinon, une recherche est faite via **OpenFDA API**.
 
-```kotlin
+  ---
+
+###  Architecture de projet 
+
+  <img width="656" alt="Capture d'écran 2025-05-27 141344" src="https://github.com/user-attachments/assets/85e0fd0c-28b8-4df0-93e7-3c4e73204e34" />
+
+
+```
 val image = BitmapFactory.decodeFile(imagePath)
 val tess = TessBaseAPI()
 tess.init(datapath, "eng")
@@ -81,6 +88,7 @@ interface ApiService {
     @GET("/api/medicaments/{name}")
     fun getMedicament(@Path("name") name: String): Call<Medicament>
 }
+
 
 
 # #Fonctionnalités principales
