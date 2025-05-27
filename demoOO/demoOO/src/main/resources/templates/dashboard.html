@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Pharma App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="dashboard-header">
+        <h1>Tableau de bord</h1>
+        <div class="user-info">
+            <span th:text="${'Bienvenue, ' + user.username}">Bienvenue, Utilisateur</span>
+            <a href="/logout" class="btn btn-outline">Déconnexion</a>
+        </div>
+    </header>
+
+    <div class="dashboard-content">
+        <div class="card">
+            <h2>Mon compte</h2>
+            <div class="account-info">
+                <p><strong>Nom d'utilisateur:</strong> <span th:text="${user.username}">Username</span></p>
+                <p><strong>Email:</strong> <span th:text="${user.email}">email@example.com</span></p>
+            </div>
+        </div>
+
+        <!-- Add more dashboard content here -->
+        <div class="card">
+            <h2>Statistiques</h2>
+            <div class="stats-container">
+                <!-- Example stats - replace with real data -->
+                <div class="stat-box">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Commandes</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Produits</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
