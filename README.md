@@ -64,8 +64,7 @@ Flask Chatbot IA
   <img width="656" alt="Capture d'écran 2025-05-27 141344" src="https://github.com/user-attachments/assets/85e0fd0c-28b8-4df0-93e7-3c4e73204e34" />
 
 ### Demonstration
-
-https://youtube.com/shorts/Qh2c8bZKhkA
+https://youtube.com/shorts/O8Jp2gkMZtM
 ```
 val image = BitmapFactory.decodeFile(imagePath)
 val tess = TessBaseAPI()
